@@ -73,10 +73,10 @@ function handleSubmit() {
       alert("Passwords do not match!");
       return;
     }
-    if (!dobDay.value || !dobMonth.value || !dobYear.value) {
-      alert("Please select your full date of birth!");
-      return;
-    }
+    // if (!dobDay.value || !dobMonth.value || !dobYear.value) {
+    //   alert("Please select your full date of birth!");
+    //   return;
+    // }
     emit("submit");
   }
 }
