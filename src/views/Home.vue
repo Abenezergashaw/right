@@ -366,6 +366,8 @@ async function submitForm() {
 
   if (!res.data.success) {
     registerError.value = res.data.message;
+    authLoader.value = false;
+
     return;
   } else {
     setTimeout(() => {
