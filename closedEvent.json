@@ -1,0 +1,80 @@
+[
+  {
+    "error": true,
+    "message": "Found errors in betslip",
+    "data": {
+      "bets": [
+        {
+          "errors": [
+            {
+              "message": "Event is not available"
+            }
+          ],
+          "amount": 10,
+          "event_name": "Kapaz Ganja V Sabah Baku FK",
+          "isLive": false,
+          "market_name": "Match Result",
+          "price_hcap": 0,
+          "price_name": "2",
+          "price_rate": 1.3799999952316284,
+          "reference_id": "35487044-1-6993-0.00",
+          "event_start_time": "",
+          "sport_id": 0,
+          "event_id": "0",
+          "monitor_status": false,
+          "price_status_id": "",
+          "market_status_id": "",
+          "market_code": "",
+          "market_id": "0",
+          "handicap_value": 0,
+          "short_code": "",
+          "live_short_code": "",
+          "maxBet": 0
+        },
+        {
+          "errors": [],
+          "amount": 10,
+          "event_name": "Port FC V Bangkok United",
+          "isLive": false,
+          "market_name": "Match Result",
+          "price_hcap": 0,
+          "price_name": "1",
+          "price_rate": 1.9600000381469727,
+          "reference_id": "35487230-1-6992-0.00",
+          "event_start_time": "Sun Nov 09 2025 15:00:00 GMT+0300 (East Africa Time)",
+          "sport_id": 501,
+          "event_id": "35487230",
+          "monitor_status": true,
+          "price_status_id": "true",
+          "market_status_id": "1",
+          "market_code": "1x2",
+          "market_id": "0",
+          "handicap_value": 0,
+          "short_code": "0",
+          "live_short_code": "",
+          "maxBet": 0
+        }
+      ],
+      "errors": [],
+      "amount": 10,
+      "offlineBet": false,
+      "bonus": 0.54,
+      "comp_bonus": 0,
+      "evenValue": 0,
+      "payUnits": false,
+      "possible_tax": 0,
+      "possible_winning": 27.59,
+      "total_amount": 10,
+      "total_odds": 2.7,
+      "type": 1,
+      "winning_with_tax": 27.59,
+      "beforeAmountTax": 0,
+      "fastBetId": "",
+      "package_id": "",
+      "meta": "",
+      "possible_extra_bonus": 0,
+      "wallet_id": 0,
+      "isLoggedIn": true
+    }
+  }
+]

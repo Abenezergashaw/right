@@ -1,0 +1,101 @@
+[
+  {
+    "module": "bet",
+    "method": "place",
+    "options": {
+      "type": "sport",
+      "offlineBet": true,
+      "betSlipFromFront": {
+        "type": 1,
+        "amount": 10,
+        "evenValue": null,
+        "payUnits": false,
+        "bets": [
+          {
+            "amount": 10,
+            "errors": [],
+            "price_rate": 2.67,
+            "price_name": "1",
+            "event_name": "Eastern District U22 V Kitchee Sc U22",
+            "isLive": false,
+            "market_name": "Match Result",
+            "price_hcap": 0,
+            "reference_id": "35500348-1-6992-0.00"
+          },
+          {
+            "amount": 10,
+            "errors": [],
+            "price_rate": 1.26,
+            "price_name": "Over",
+            "event_name": "FC Gandzasar V Alashkert FC",
+            "isLive": false,
+            "market_name": "Total Goals",
+            "price_hcap": 1.5,
+            "reference_id": "35314493-4-15602-1.50"
+          },
+          {
+            "amount": 10,
+            "errors": [],
+            "price_rate": 2.49,
+            "price_name": "1",
+            "event_name": "KF Tirana V Bylis Ballsh",
+            "isLive": false,
+            "market_name": "Handicap",
+            "price_hcap": -1.5,
+            "reference_id": "35114440-3-6--1.50"
+          }
+        ],
+        "visible": true,
+        "possible_tax": 0,
+        "winning_with_tax": 86.28,
+        "isUnitCalculate": true,
+        "beforeAmountTax": null,
+        "possible_winning": 86.28,
+        "total_odds": 8.38,
+        "ccConf": {
+          "force_convert_to_express": true,
+          "multibonus": {
+            "enabled": true,
+            "ruller": [
+              0, 1, 2, 3, 4, 8, 12, 20, 25, 30, 40, 50, 60, 75, 85, 95, 105,
+              115, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 235,
+              245, 255, 265, 275, 285, 300, 320, 340, 360, 400, 450, 500, 550,
+              600, 650, 700, 750, 800, 850, 900, 1001
+            ],
+            "bet_amount_is_included": true,
+            "decimal_places": 2,
+            "use_with_units": true,
+            "min_odd": 1.2
+          },
+          "tax": {
+            "enabled": true,
+            "value": 15,
+            "bet_amount_is_taxable": true,
+            "conditions": {
+              "range": [
+                {
+                  "min": 0,
+                  "max": 1000,
+                  "value": 0
+                }
+              ]
+            }
+          },
+          "vat": {
+            "enabled": false,
+            "value": 1
+          },
+          "finalmultiplier": {
+            "enabled": false,
+            "value": 1.15
+          }
+        },
+        "total_amount": 10,
+        "bonus": 2.51,
+        "comp_bonus": 0,
+        "errors": [],
+        "offlineBet": true
+      }
+    }
+  }
+]

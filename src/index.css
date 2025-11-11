@@ -1,0 +1,74 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Light theme */
+  .arada-theme {
+    --nav_blue: #c8102e;
+    --text_white: #ececec;
+    --text_black: #111;
+    --general_blue: #213a83;
+    --general_yellow: #dca73d;
+    --gray-bg: #a6a9ae;
+    --bg_white: #fff;
+    --bg_black: #111;
+    --light_gray: #d3d3d3;
+  }
+
+  /* Dark theme */
+  .theme-dark {
+    --bg-main: theme("colors.gray.900");
+    --text-main: theme("colors.gray.100");
+    --setting-main: theme("colors.gray.700");
+    --card-main: theme("colors.gray.700");
+    --input-main: theme("colors.gray.900");
+    --shadow-main: theme("colors.gray.400");
+    --hr-main: theme("colors.gray.600");
+    --accent-main: theme("colors.gray.800");
+    --cards-main: theme("colors.gray.600");
+    --selected-cards: theme("colors.gray.200");
+    --selected-cards-text: theme("colors.gray.600");
+    --play-button: theme("colors.gray.700");
+    --inner-shadow-ball: theme("colors.gray.800");
+    --outer-shadow-ball: theme("colors.gray.400");
+    --ball-color: theme("colors.gray.200");
+    --called-ball: theme("colors.gray.300");
+    --called-text: theme("colors.gray.800");
+    --border-main: theme("colors.gray.200");
+    --shuffle-ball-t: theme("colors.gray.800");
+    --shuffle-ball-b: theme("colors.gray.500");
+    --shuffle-ball-s: theme("colors.gray.600");
+  }
+
+  /* Teal theme */
+  .theme-teal {
+    --bg-main: theme("colors.teal.500");
+    --text-main: theme("colors.white");
+    --setting-main: theme("colors.teal.700");
+    --card-main: theme("colors.teal.700");
+    --input-main: theme("colors.teal.500");
+    --shadow-main: theme("colors.teal.800");
+    --hr-main: theme("colors.teal.800");
+    --accent-main: theme("colors.teal.900");
+    --cards-main: theme("colors.teal.600");
+    --selected-cards: theme("colors.teal.200");
+    --selected-cards-text: theme("colors.gray.800");
+    --play-button: theme("colors.gray.200");
+    --inner-shadow-ball: theme("colors.teal.600");
+    --outer-shadow-ball: theme("colors.teal.300");
+    --ball-color: theme("colors.gray.800");
+    --called-ball: theme("colors.teal.400");
+    --called-text: theme("colors.gray.200");
+    --border-main: theme("colors.teal.600");
+    --shuffle-ball-t: theme("colors.teal.500");
+    --shuffle-ball-b: theme("colors.teal.700");
+    --shuffle-ball-s: theme("colors.teal.400");
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+  }
+}
