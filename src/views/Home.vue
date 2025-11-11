@@ -368,6 +368,8 @@ async function submitForm() {
     registerError.value = res.data.message;
     return;
   } else {
+    window.location.reload();
+
     const ok = await auth.checkSession();
     if (ok) {
       majorScreenUIState.value = "Home";
@@ -921,6 +923,8 @@ async function topGameInfosClicked(title) {
       currentUIState.value = "Country-List";
       filteredSport.value = "Football";
     }
+  } else if (title === "Live") {
+    majorScreenUIState.value = "Live";
   } else if (title === "Tennis") {
     currentUIState.value = "Loading";
 
@@ -1216,6 +1220,10 @@ onMounted(async () => {
       @transactionWithdraw="
         transaction = true;
         transactionState = 'withdraw';
+      "
+      @goToRules="
+        majorScreenUIState = 'Home';
+        currentUIState = 'Rules';
       "
       @goToPromotions="majorScreenUIState = 'Promo'"
       @logout="handleLogout"
@@ -1586,6 +1594,10 @@ onMounted(async () => {
       @logout="handleLogout"
       :isLoggedIn="isLoggedIn"
       :balance="balance"
+      @goToRules="
+        majorScreenUIState = 'Home';
+        currentUIState = 'Rules';
+      "
       @goToCheckTicket="handleGoToCheckTicket"
       @goToTopSports="getTopSports"
       @goToUpcomingGames="getUpcomingEvents"
@@ -1623,6 +1635,10 @@ onMounted(async () => {
       @transactionWithdraw="
         transaction = true;
         transactionState = 'withdraw';
+      "
+      @goToRules="
+        majorScreenUIState = 'Home';
+        currentUIState = 'Rules';
       "
       @goToPromotions="majorScreenUIState = 'Promo'"
       @logout="handleLogout"
@@ -1667,6 +1683,10 @@ onMounted(async () => {
       @logout="handleLogout"
       :isLoggedIn="isLoggedIn"
       :balance="balance"
+      @goToRules="
+        majorScreenUIState = 'Home';
+        currentUIState = 'Rules';
+      "
       @goToCheckTicket="handleGoToCheckTicket"
       @goToTopSports="getTopSports"
       @goToUpcomingGames="getUpcomingEvents"
@@ -1710,6 +1730,10 @@ onMounted(async () => {
       @transactionWithdraw="
         transaction = true;
         transactionState = 'withdraw';
+      "
+      @goToRules="
+        majorScreenUIState = 'Home';
+        currentUIState = 'Rules';
       "
       @goToPromotions="majorScreenUIState = 'Promo'"
       @logout="handleLogout"
@@ -1767,6 +1791,10 @@ onMounted(async () => {
       @goToPromotions="majorScreenUIState = 'Promo'"
       @logout="handleLogout"
       :isLoggedIn="isLoggedIn"
+      @goToRules="
+        majorScreenUIState = 'Home';
+        currentUIState = 'Rules';
+      "
       :balance="balance"
       @goToCheckTicket="handleGoToCheckTicket"
       @goToTopSports="getTopSports"
@@ -1820,7 +1848,10 @@ onMounted(async () => {
       :isLoggedIn="isLoggedIn"
       :balance="balance"
       @goToCheckTicket="handleGoToCheckTicket"
-      @goToRules="currentUIState = 'Rules'"
+      @goToRules="
+        majorScreenUIState = 'Home';
+        currentUIState = 'Rules';
+      "
       @goToTopSports="getTopSports"
       @goToUpcomingGames="getUpcomingEvents"
       @goToCountryList="topGameInfosClicked('Sport')"
