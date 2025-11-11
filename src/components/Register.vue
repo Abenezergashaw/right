@@ -187,7 +187,7 @@ function handleSubmit() {
     </div>
 
     <!-- Agree Checkbox -->
-    <div class="flex items-center">
+    <div class="flex items-center a">
       <input v-model="agreed" type="checkbox" id="agree" class="mr-2" />
       <label for="agree" class="font-medium"
         >I agree to the terms and conditions <span class="">*</span></label
