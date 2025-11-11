@@ -368,7 +368,9 @@ async function submitForm() {
     registerError.value = res.data.message;
     return;
   } else {
-    window.location.reload();
+    setTimeout(() => {
+      window.location.reload();
+    }, 1500);
 
     const ok = await auth.checkSession();
     if (ok) {

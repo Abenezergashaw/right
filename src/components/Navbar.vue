@@ -270,7 +270,7 @@ const toggleBalance = () => {
         <span class="uppercase font-semibold text-sm">Virtual sport</span>
       </div>
       <div
-        class="hidden flex justify-start gap-2 items-center px-4 border-b py-2 border-black"
+        class="hidden justify-start gap-2 items-center px-4 border-b py-2 border-black"
       >
         <img src="/icons/result.svg" class="h-6 w-6 changeIconColor" alt="" />
         <span class="uppercase font-semibold text-sm">results</span>
