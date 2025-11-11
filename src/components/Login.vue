@@ -108,7 +108,7 @@ function handleSubmit() {
     >
       <div
         v-if="authLoader"
-        class="w-6 h-6 border-2 border-[#9dabd1] rounded-full border-t-transparent animate-spin"
+        class="w-6 h-6 border-2 border-[#fff] rounded-full border-t-transparent animate-spin"
       ></div>
       <span v-if="!authLoader">Login</span>
     </button>

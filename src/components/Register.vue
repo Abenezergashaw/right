@@ -142,7 +142,7 @@ function handleSubmit() {
     </div>
 
     <!-- Date of Birth -->
-    <div>
+    <!-- <div>
       <label class="block text-xs mb-3 opacity-90 font-light">
         Date of Birth <span class="">*</span>
       </label>
@@ -171,7 +171,7 @@ function handleSubmit() {
           <option v-for="y in years" :key="y" :value="y">{{ y }}</option>
         </select>
       </div>
-    </div>
+    </div> -->
 
     <!-- Promo Code -->
     <div>
@@ -204,11 +204,11 @@ function handleSubmit() {
       :disabled="
         !agreed || password === '' || confirmPassword === '' || phone === ''
       "
-      class="w-full bg-[#C8102E] text-white py-2 disabled:bg-[#91404e] uppercase disabled:opacity-50"
+      class="w-full flex justify-center items-center bg-[#C8102E] text-white py-2 disabled:bg-[#91404e] uppercase disabled:opacity-50"
     >
       <div
         v-if="authLoader"
-        class="w-4 h-4 border-2 border-[#647EC3] rounded-full border-t-transparent animate-spin"
+        class="w-6 h-6 border-2 border-[#fff] rounded-full border-t-transparent animate-spin"
       ></div>
       <span v-if="!authLoader">Confirm</span>
     </button>
