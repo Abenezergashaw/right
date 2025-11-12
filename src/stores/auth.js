@@ -18,6 +18,8 @@ export const useAuthStore = defineStore("auth", {
           withCredentials: true,
         });
 
+        alert(JSON.stringify(res.data));
+
         if (res.data.expired) {
           return;
         }
