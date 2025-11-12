@@ -27,16 +27,18 @@ import Login from "@/components/Login.vue";
 import CheckTicketData from "@/components/CheckTicketData.vue";
 import Rules from "@/components/Rules.vue";
 import { useAuthStore } from "@/stores/auth";
+import { useUrl } from "@/stores/url";
 import BetHistory from "@/components/BetHistory.vue";
 import Promo from "@/components/Promo.vue";
 import PromoDetail from "@/components/PromoDetail.vue";
 
 const auth = useAuthStore();
+const url = useUrl().url;
 const isLoggedIn = ref(false);
 
 const { theme, setTheme } = useTheme();
 
-const url = "https://right.gondarmenu.com";
+// const url = "https://right.gondarmenu.com";
 // const url = "http://localhost:3000";
 
 const gameData = ref(null);

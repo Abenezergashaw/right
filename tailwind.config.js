@@ -6,6 +6,9 @@ export default {
       height: {
         "screen-safe": "calc(var(--vh, 1vh) * 100)",
       },
+      fontFamily: {
+        sans: ['"Roboto Condensed"', "sans-serif"],
+      },
     },
   },
   plugins: [],

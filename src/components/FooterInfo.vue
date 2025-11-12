@@ -21,7 +21,7 @@ import { EnvelopeIcon } from "@heroicons/vue/24/solid";
     >
       <EnvelopeIcon class="h-4 w-4" />
       <span>Mail </span>
-      <span class="text-[#ededed] underline font-bold">info@arada.bet</span>
+      <span class="text-[#ededed] underline font-bold">info@rightbet.bet</span>
     </div>
 
     <div
