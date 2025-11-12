@@ -31,6 +31,7 @@ import { useUrl } from "@/stores/url";
 import BetHistory from "@/components/BetHistory.vue";
 import Promo from "@/components/Promo.vue";
 import PromoDetail from "@/components/PromoDetail.vue";
+import DotLoader from "@/components/DotLoader.vue";
 
 const auth = useAuthStore();
 const url = useUrl().url;
@@ -1705,15 +1706,8 @@ onMounted(async () => {
       @openShowModal="showBalanceModal = true"
     />
 
-    <main class="flex-1 overflow-y-auto flex flex-col bg-[#fff]">
-      <div class="w-full h-full flex flex-col gap-4 pt-48 items-center">
-        <div
-          class="w-20 h-20 border-[6px] rounded-full border-[#C8102E] border-t-transparent animate-spin"
-        ></div>
-        <span class="text-lg tracking-wider font-bold text-[#C8102E]"
-          >Connecting...</span
-        >
-      </div>
+    <main class="flex-1 overflow-y-auto flex bg-[#fff]">
+      <DotLoader />
     </main>
     <Footer
       v-if="ticketData.length === 0 && !betSuccessful"
