@@ -74,7 +74,7 @@ function handleOpenCloseCountry(index) {
   <div v-for="(c, index) in filteredGames?.countries" class="">
     <div
       @click="handleOpenCloseCountry(index)"
-      class="bg-white my-1 py-2 px-4 font-bold text-sm relative"
+      class="bg-white my-1 py-[11px] px-4 font-bold text-sm relative"
     >
       <div class="flex gap-2 items-center">
         <img :src="`../flags/${getFlag(c.name)}`" alt="" class="w-6 h-4" />
@@ -107,7 +107,7 @@ function handleOpenCloseCountry(index) {
           filteredSport
         )
       "
-      class="w-[95%] mx-auto my-1 py-2.5 px-11 font-bold text-sm bg-white relative"
+      class="w-[98%] mx-auto mt-1 mb-2 py-2.5 px-11 font-bold text-sm bg-white relative"
     >
       {{ l.competitionName }}
       <span class="absolute top-1.5 right-7 text-[#647EC3]">{{

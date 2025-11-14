@@ -1619,7 +1619,12 @@ onMounted(async () => {
 
     <main class="flex-1 overflow-y-auto flex flex-col bg-[#fff]">
       <Promo @goToPromoDetails="handleGoToPromoDetails" />
-      <FooterInfo />
+      <FooterInfo
+        @click="
+          majorScreenUIState = 'Home';
+          currentUIState = 'Rules';
+        "
+      />
     </main>
     <Footer
       v-if="ticketData.length === 0 && !betSuccessful"
@@ -1665,7 +1670,12 @@ onMounted(async () => {
 
     <main class="flex-1 overflow-y-auto flex flex-col bg-[#fff]">
       <PromoDetail :promo="promoDetail" />
-      <FooterInfo />
+      <FooterInfo
+        @click="
+          majorScreenUIState = 'Home';
+          currentUIState = 'Rules';
+        "
+      />
     </main>
     <Footer
       v-if="ticketData.length === 0 && !betSuccessful"
@@ -1767,7 +1777,12 @@ onMounted(async () => {
           @submit="submitForm"
         />
       </div>
-      <FooterInfo />
+      <FooterInfo
+        @click="
+          majorScreenUIState = 'Home';
+          currentUIState = 'Rules';
+        "
+      />
     </main>
     <Footer
       v-if="ticketData.length === 0 && !betSuccessful"
@@ -1822,7 +1837,12 @@ onMounted(async () => {
           @submit="submitLogin"
         />
       </div>
-      <FooterInfo />
+      <FooterInfo
+        @click="
+          majorScreenUIState = 'Home';
+          currentUIState = 'Rules';
+        "
+      />
     </main>
     <Footer
       v-if="ticketData.length === 0"
@@ -1877,7 +1897,7 @@ onMounted(async () => {
         />
         <div
           v-if="middleGameInfoState === 'Upcoming'"
-          class="flex justify-end items-center gap-2 py-1 px-2"
+          class="flex justify-end items-center gap-3 py-1 px-2"
           style="background-color: var(--bg_white)"
         >
           <GameTimeButton
@@ -1910,7 +1930,12 @@ onMounted(async () => {
             :ticketData="ticketData"
           />
         </div>
-        <FooterInfo />
+        <FooterInfo
+          @click="
+            majorScreenUIState = 'Home';
+            currentUIState = 'Rules';
+          "
+        />
       </div>
 
       <div v-else-if="currentUIState === 'Single-Game-List'">
@@ -1920,7 +1945,12 @@ onMounted(async () => {
           @goBackToGameList="handleUIStateChange"
           @betSelected="handleBetSelection"
         />
-        <FooterInfo />
+        <FooterInfo
+          @click="
+            majorScreenUIState = 'Home';
+            currentUIState = 'Rules';
+          "
+        />
       </div>
 
       <div v-else-if="currentUIState === 'Country-List'">
@@ -1930,7 +1960,12 @@ onMounted(async () => {
           v-model:currentTime="gameListFilterByTime"
           @goToLeagueGames="handleGoningToLeagueGames"
         />
-        <FooterInfo />
+        <FooterInfo
+          @click="
+            majorScreenUIState = 'Home';
+            currentUIState = 'Rules';
+          "
+        />
       </div>
 
       <div v-else-if="currentUIState === 'League-List'">
@@ -1961,7 +1996,12 @@ onMounted(async () => {
             :ticketData="ticketData"
           />
         </div>
-        <FooterInfo />
+        <FooterInfo
+          @click="
+            majorScreenUIState = 'Home';
+            currentUIState = 'Rules';
+          "
+        />
       </div>
 
       <div v-else-if="currentUIState === 'Loading'" class="h-full bg-[#010101]">
@@ -1999,7 +2039,13 @@ onMounted(async () => {
           v-if="checkTicketData"
           :checkTicketData="checkTicketData ? checkTicketData : {}"
         />
-        <FooterInfo v-if="checkTicketData" />
+        <FooterInfo
+          v-if="checkTicketData"
+          @click="
+            majorScreenUIState = 'Home';
+            currentUIState = 'Rules';
+          "
+        />
       </div>
 
       <div v-else-if="currentUIState === 'Bet-History'" class="">
@@ -2015,21 +2061,25 @@ onMounted(async () => {
       </div>
     </main>
     <Footer
-      v-if="ticketData.length === 0 && !betSuccessful"
+      v-if="
+        ticketData.length === 0 && !betSuccessful && currentUIState !== 'Rules'
+      "
       :isLoggedIn="isLoggedIn"
       @goToLogin="majorScreenUIState = 'Login'"
       @goToLive="majorScreenUIState = 'Live'"
       @goToDeposit="majorScreenUIState = 'Transaction'"
     />
     <TicketDataFooter
-      v-if="ticketData.length > 0"
+      v-if="ticketData.length > 0 && currentUIState !== 'Rules'"
       :tickets="ticketData.length"
       :totalOdds="totalOdds"
       :point="currentBonus"
       @makeTicketPanelVisible="majorScreenUIState = 'Ticket'"
     />
     <div
-      v-if="ticketData.length === 0 && betSuccessful"
+      v-if="
+        ticketData.length === 0 && betSuccessful && currentUIState !== 'Rules'
+      "
       class="h-10 text-center font-bold text-white flex items-center justify-center relative"
     >
       Bet Accepted
@@ -2038,6 +2088,13 @@ onMounted(async () => {
         class="absolute right-2 text-[10px] opacity-80 whitespace-pre-line w-10"
         >Bet History</span
       >
+    </div>
+
+    <div
+      v-if="currentUIState === 'Rules'"
+      class="h-12 text-center font-bold text-white flex items-center justify-center relative"
+    >
+      Right Bet Sport & Entertainment PLC
     </div>
   </div>
 

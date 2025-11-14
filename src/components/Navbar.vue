@@ -107,7 +107,7 @@ const toggleBalance = () => {
       <div
         v-if="isLoggedIn"
         @click="$emit('openShowModal')"
-        class="flex flex-col items-end justify-center font-semibold"
+        class="flex flex-col items-end justify-center font-medium gap-1"
       >
         <span>{{ balance }} ETB</span>
         <span>ID: {{ auth.user.id }}</span>
@@ -132,7 +132,7 @@ const toggleBalance = () => {
   <transition name="fade">
     <div
       v-if="isOpen"
-      class="fixed inset-0 bg-black bg-opacity-50 z-40"
+      class="fixed inset-0 bg-black bg-opacity-90 z-40"
       @click="toggleMenu"
     ></div>
   </transition>
@@ -140,7 +140,7 @@ const toggleBalance = () => {
   <transition name="slide">
     <div
       v-if="isOpen"
-      class="fixed top-0 left-0 h-full w-[85%] bg-[#fff] shadow-lg z-50"
+      class="fixed top-0 left-0 h-full w-[85%] bg-[#ededed] shadow-lg z-50"
     >
       <div
         class="flex justify-start gap-6 px-2 items-center bg-[#C8102E] py-4 border-b-2 border-red-500"
@@ -305,14 +305,14 @@ const toggleBalance = () => {
   <transition name="fade">
     <div
       v-if="isAccountMenuOpen"
-      class="fixed inset-0 bg-black bg-opacity-50 z-40"
+      class="fixed inset-0 bg-black bg-opacity-90 z-40"
       @click="toggleAccountMenu"
     ></div>
   </transition>
   <transition name="slide-right">
     <div
       v-if="isAccountMenuOpen"
-      class="fixed top-0 right-0 h-full w-[85%] bg-[#fff] shadow-lg z-50"
+      class="fixed top-0 right-0 h-full w-[70%] bg-[#ededed] shadow-lg z-50"
     >
       <div
         class="flex justify-between items-center px-4 py-4 bg-[#C8102E] border-b border-gray-500"
@@ -347,7 +347,7 @@ const toggleBalance = () => {
         <ChevronUpIcon v-else class="h-4 w-4 absolute top-2 right-2" />
       </div>
 
-      <div v-if="isMyBetsOpened" class="bg-white">
+      <div v-if="isMyBetsOpened" class="bg-[white]">
         <div
           @click="
             toggleAccountMenu();

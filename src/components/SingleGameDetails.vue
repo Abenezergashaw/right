@@ -14,13 +14,13 @@ defineProps({
 </script>
 
 <template>
-  <div class="bg-white pb-4">
+  <div class="bg-white pb-1">
     <div v-for="(m, index) in gameDetail.markets" class="px-4 py-2 text-sm">
       <div
         @click="$emit('openCloseMarket', index)"
-        class="flex justify-between py-1 border-b-[1.5px]"
+        class="flex justify-between pt-1 pb-2 mb-3 border-b-[1.5px]"
       >
-        <span class="font-semibold">
+        <span class="font-semibold tracking-wide uppercase text-xs">
           {{ m.marketName }}
         </span>
         <ChevronUpSolid v-if="opendMarkets.includes(index)" class="w-4 h-4" />
@@ -91,7 +91,7 @@ defineProps({
             :class="
               ticketData.some((t) => t.reference_id === p.referenceId)
                 ? 'text-white font-semibold'
-                : 'text-[#333]'
+                : ' text-[#000] text-[13px] font-medium'
             "
             >{{ p.rate === 0 ? "-" : p.rate }}</span
           >
@@ -159,11 +159,11 @@ defineProps({
             >
           </div>
           <span
-            class="text-xs"
+            class="text-xs tracking-wide"
             :class="
               ticketData.some((t) => t.reference_id === p.referenceId)
                 ? 'text-white font-semibold'
-                : 'text-[#333]'
+                : 'text-[#000] text-[13px] font-semibold'
             "
             >{{ p.rate === 0 ? "-" : p.rate }}</span
           >

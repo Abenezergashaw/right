@@ -39,6 +39,7 @@ import { EnvelopeIcon } from "@heroicons/vue/24/solid";
         <span class="text-[11px] font-semibold">Security & Responsibility</span>
       </div>
       <button
+        @click="$emit('goToRules')"
         class="uppercase bg-[white] text-[#C8102E] text-[11px] px-3 py-1 rounded-md"
       >
         click for rules

@@ -48,7 +48,7 @@ const formattedDate = computed(() => {
         <img
           :src="`../flags/${getFlag(game.country)}`"
           alt=""
-          class="w-6 h-4"
+          class="w-[18px] h-[12px]"
         />
         <span class="text-[11px]"
           >{{ game.country }} - {{ game.competitionName }}</span
@@ -69,7 +69,7 @@ const formattedDate = computed(() => {
         )
       "
     >
-      <span class="font-semibold">{{ game.events[0].eventName }}</span>
+      <span class="font-medium uppercase">{{ game.events[0].eventName }}</span>
       <div class="box text-[10px] px-1 font-semibold -translate-x-2">
         +{{ game.events[0].pricesCount }}
         <div class="triangle"></div>
@@ -123,8 +123,8 @@ const formattedDate = computed(() => {
                 t.reference_id ===
                 game.events[0].collections[0].markets[0].prices[0].referenceId
             )
-              ? 'text-white font-semibold'
-              : 'text-[#666]'
+              ? 'text-white font-semibold text-[13px]'
+              : 'text-[#666] text-[13px]'
           "
           >1</span
         >
@@ -135,8 +135,8 @@ const formattedDate = computed(() => {
                 t.reference_id ===
                 game.events[0].collections[0].markets[0].prices[0].referenceId
             )
-              ? 'text-white font-semibold'
-              : 'text-[#333]'
+              ? 'text-white font-semibold text-[14px]'
+              : 'text-[#000] text-[14px]'
           "
           >{{
             game.events[0].collections[0].markets[0].prices[0].rate === 0
@@ -191,8 +191,8 @@ const formattedDate = computed(() => {
                 t.reference_id ===
                 game.events[0].collections[0].markets[0].prices[1].referenceId
             )
-              ? 'text-white font-semibold'
-              : 'text-[#666]'
+              ? 'text-white font-semibold text-[13px]'
+              : 'text-[#666] text-[13px]'
           "
           >X</span
         >
@@ -203,8 +203,8 @@ const formattedDate = computed(() => {
                 t.reference_id ===
                 game.events[0].collections[0].markets[0].prices[1].referenceId
             )
-              ? 'text-white font-semibold'
-              : 'text-[#333]'
+              ? 'text-white font-semibold text-[14px]'
+              : 'text-[#000] text-[14px]'
           "
           >{{
             game.events[0].collections[0].markets[0].prices[1].rate === 0
@@ -259,8 +259,8 @@ const formattedDate = computed(() => {
                 t.reference_id ===
                 game.events[0].collections[0].markets[0].prices[2].referenceId
             )
-              ? 'text-white font-semibold'
-              : 'text-[#666]'
+              ? 'text-white font-semibold text-[13px]'
+              : 'text-[#666] text-[13px]'
           "
           >2</span
         >
@@ -271,8 +271,8 @@ const formattedDate = computed(() => {
                 t.reference_id ===
                 game.events[0].collections[0].markets[0].prices[2].referenceId
             )
-              ? 'text-white font-semibold'
-              : 'text-[#333]'
+              ? 'text-white font-semibold text-[14px]'
+              : 'text-[#000] text-[14px]'
           "
           >{{
             game.events[0].collections[0].markets[0].prices[2].rate === 0
